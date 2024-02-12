@@ -1,0 +1,17 @@
+public class Biblioteca {
+    private List<Usuario> usuarios;
+    private List<Libro> libros;
+    private List<Prestamo> prestamos;
+    
+    public void agregarUsuario(Usuario usuario) {
+        usuarios.add(usuario);
+    }
+    
+    public void agregarLibro(Libro libro) {
+        libros.add(libro);
+    }
+    
+    public void realizarPrestamo(Usuario usuario, Libro libro, Date fechaInicio, Date fechaFin) {
+        Prestamo prestamo = new Prestamo(usuario, libro, fechaInicio, fechaFin);
+        prestamos.add(prestamo);
+    }
