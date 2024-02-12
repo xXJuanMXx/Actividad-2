@@ -1,0 +1,45 @@
+public class Usuario {
+    private int id;
+    private String nombre;
+    // Otros atributos y métodos
+}
+
+public class Libro {
+    private int id;
+    private String titulo;
+    private String autor;
+    // Otros atributos y métodos
+}
+
+public class Prestamo {
+    private int id;
+    private Usuario usuario;
+    private Libro libro;
+    private Date fechaInicio;
+    private Date fechaFin;
+    // Otros atributos y métodos
+}
+
+Implementación de Funcionalidades:
+Implementa métodos para realizar operaciones como agregar un usuario, agregar un libro, realizar un préstamo, etc.
+
+public class Biblioteca {
+    private List<Usuario> usuarios;
+    private List<Libro> libros;
+    private List<Prestamo> prestamos;
+    
+    public void agregarUsuario(Usuario usuario) {
+        usuarios.add(usuario);
+    }
+    
+    public void agregarLibro(Libro libro) {
+        libros.add(libro);
+    }
+    
+    public void realizarPrestamo(Usuario usuario, Libro libro, Date fechaInicio, Date fechaFin) {
+        Prestamo prestamo = new Prestamo(usuario, libro, fechaInicio, fechaFin);
+        prestamos.add(prestamo);
+    }
+    
+    // Otros métodos para buscar libros, usuarios, etc.
+}
